@@ -78,7 +78,8 @@ nav a[aria-current="page"] { color: var(--accent); background: var(--accent-soft
   width: 100%; aspect-ratio: 3 / 2; object-fit: cover;
   border-radius: var(--radius); box-shadow: var(--shadow);
 }
-.tagline { color: var(--muted); font-size: 1.1rem; margin-bottom: 1rem; }
+.tagline { color: var(--muted); font-size: 1.05rem; line-height: 1.35; margin-bottom: 1.25rem; display: flex; align-items: center; gap: .7rem; }
+.tagline .logo { width: 44px; height: 44px; flex: none; }
 .btn-row { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.25rem; }
 .btn {
   display: inline-flex; align-items: center; gap: .4rem;
@@ -96,7 +97,28 @@ main { padding-bottom: 3rem; }
   background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--accent);
   border-radius: var(--radius); padding: 1rem 1.25rem; margin: 1.5rem 0;
 }
+.callout p { margin-bottom: .6rem; }
 .callout p:last-child { margin-bottom: 0; }
+
+/* Highlighted "curiosity" box */
+.spark {
+  position: relative; margin: 2rem 0;
+  padding: 1.5rem 1.6rem 1.4rem;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--accent-soft), var(--surface) 70%);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+.spark::before {
+  content: ""; position: absolute; inset: 0 auto 0 0; width: 5px;
+  background: var(--accent); border-radius: var(--radius) 0 0 var(--radius);
+}
+.spark-kicker {
+  font-family: Inter, system-ui, sans-serif; font-size: .78rem; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: .6rem;
+}
+.spark p { font-size: 1.08rem; }
+.spark p:last-child { margin-bottom: 0; }
 ul.links { padding-left: 1.2rem; }
 ul.links li { margin-bottom: .35rem; }
 
@@ -146,4 +168,5 @@ ul.links li { margin-bottom: .35rem; }
 
 /* ---------- Footer ---------- */
 footer { border-top: 1px solid var(--border); padding: 1.5rem 0 2.5rem; color: var(--muted); font-size: .85rem; }
-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem; align-items: center; }
+.foot-brand { display: inline-flex; align-items: center; gap: .5rem; }

@@ -133,6 +133,8 @@ ul.links li { margin-bottom: .35rem; }
   .card.project.wide { grid-template-columns: 1fr; }
 }
 .card figure { margin: 0; }
+.card figure.full { max-width: 640px; margin-top: .25rem; }
+.card figure.full img { background: #fff; padding: .4rem; }
 .card figure img { border-radius: 8px; border: 1px solid var(--border); background: #fff; }
 .card figcaption { font-size: .85rem; color: var(--muted); margin-top: .5rem; line-height: 1.4; }
 .meta { font-size: .85rem; color: var(--muted); margin-bottom: .6rem; }

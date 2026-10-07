@@ -34,16 +34,16 @@
 
   <h2 id="research">Research</h2>
 
-  <article class="card project">
+  <article class="card project wide">
     <div>
       <div class="meta"><span class="tag">New · 2026</span><span class="tag">Symmetry</span><span class="tag">Image analysis</span></div>
       <h3>A high-throughput tool for quantifying symmetry in image datasets</h3>
       <p>Biological symmetry is usually reduced to a discrete, subjective label, even though real organisms are symmetric by degrees. With Punit Gandhi, Maria-Veronica Ciocanel, and Adriana Dawes, I built a user-friendly computational pipeline that measures symmetry as a continuous variable using transformation information. We prove the measure is invariant, equivariant, and Lipschitz continuous under translation, rotation, reflection, and rescaling, which means it can be applied across heterogeneous image datasets without manual landmarking or alignment.</p>
       <p>Published in the <em>Bulletin of Mathematical Biology</em>. <a href="https://link.springer.com/epdf/10.1007/s11538-026-01754-9?sharing_token=SE8TNnUE3oilE01Us4fa0_e4RwlQNchNByi7wbcMAY4WlV_rGijbqDaA8Fr7830GAKeMncpIOEDiSuMh5CEQzjRL1ufHJtHZa0URgUhm5rr5hwh0gVDjmleghElhGr7EeBrZ4JApwAdycWcws3ccg0rB5VgP6GZGxrrEWQM5w1E%3D" target="_blank" rel="noopener">Read the paper (free access) →</a> · <a href="https://github.com/ldobrien1234/TransInfo" target="_blank" rel="noopener">Code →</a></p>
     </div>
-    <figure>
-      <img src="assets/img/flower-symmetry.jpg" alt="Four flowers with their detected symmetry centers marked" loading="lazy">
-      <figcaption>Four flowers from the floral dataset. The symmetry centers found by rotation and by reflection agree closely with the intensity-weighted centroid. From Fig. 10 of the paper.</figcaption>
+    <figure class="full">
+      <img src="assets/img/ti-equivariance.png" alt="A flower image under rotation, reflection, and rescaling, with the corresponding transformation information curves for rotations and reflections" loading="lazy">
+      <figcaption>Transformation information is equivariant. Rotating, reflecting, or rescaling a flower image (top row) shifts or rescales its symmetry curves in a predictable way (bottom rows), so symmetry can be compared across images without aligning them first.</figcaption>
     </figure>
   </article>
 

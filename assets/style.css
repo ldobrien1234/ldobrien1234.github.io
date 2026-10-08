@@ -79,7 +79,11 @@ nav a[aria-current="page"] { color: var(--accent); background: var(--accent-soft
   border-radius: var(--radius); box-shadow: var(--shadow);
 }
 .tagline { color: var(--muted); font-size: 1.05rem; line-height: 1.35; margin-bottom: 1.25rem; display: flex; align-items: center; gap: .7rem; }
-.tagline .logo { width: 44px; height: 44px; flex: none; }
+.tagline .logo {
+  width: 44px; height: 44px; flex: none;
+  aspect-ratio: auto; object-fit: contain;
+  border-radius: 0; box-shadow: none;
+}
 .btn-row { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.25rem; }
 .btn {
   display: inline-flex; align-items: center; gap: .4rem;

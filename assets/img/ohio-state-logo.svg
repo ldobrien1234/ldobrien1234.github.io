@@ -1,6 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
-  <!-- Block O: scarlet octagonal ring with gray edges -->
-  <path fill="#ba0c2f" stroke="#a7b1b7" stroke-width="4" stroke-linejoin="miter" fill-rule="evenodd"
-        d="M26 3 H74 L97 26 V74 L74 97 H26 L3 74 V26 Z
-           M35 24 L24 35 V65 L35 76 H65 L76 65 V35 L65 24 Z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4.74 -0.17 40 40">
+  <!-- The Ohio State University Block O (university brand mark). Vector from Wikimedia Commons: Ohio State University horizontal logo.svg -->
+  <g transform="matrix(1.25 0 0 -1.25 -473.39 966.5)"><path fill="#ba0c2f" d="m401.17 766.12-4.93 4.917h-10.675l-4.955-4.958v-17.553l4.955-4.96h10.675l4.93 4.905v17.649zm-15.489-2.169 1.995 1.994h6.464l1.994-1.994v-13.292l-1.994-1.995h-6.464l-1.995 1.995v13.292z"/></g>
+  <path fill="#a7b1b7" fill-rule="evenodd" d="M7.9863 1.0723l-7.0586 7.0547 0.00003 23.359 7.0098 7.098h14.598l7.052-7.064v-23.395l-7.006-7.0527h-14.596zM22.2913 1.7090l6.598 6.6152 0.019 22.922-6.662 6.664h-13.974l-6.7095-6.713v-22.785l6.709-6.7011 14.02-0.0019zM11.6583 10.0250l-1.9529 1.952v15.796l1.9099 1.911h7.272l1.892-1.895v-15.783l-1.98-1.981h-7.141zM11.9353 10.6640h6.627l1.58 1.58v15.277l-1.522 1.522h-6.746l-1.498-1.496v-15.324l1.559-1.559z"/>
 </svg>

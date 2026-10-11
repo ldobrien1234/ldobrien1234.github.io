@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projects - Liam D. O'Brien</title>
-  <meta name="description" content="Research projects, publications, and code by Liam D. O'Brien: pattern formation, approximate symmetry, graph neural ODEs, and expository mathematics.">
+  <meta name="description" content="Research projects, publications, and code by Liam D. O'Brien: pattern formation, approximate symmetry, QSP model correction, graph neural ODEs, and expository mathematics.">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23bb0000'/%3E%3Ctext x='16' y='22' font-family='Helvetica,Arial,sans-serif' font-weight='700' font-size='17' fill='white' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
 </head>
@@ -31,6 +31,16 @@
   </section>
 
   <h2 id="research">Research</h2>
+
+  <article class="card project wide">
+    <div>
+      <div class="meta"><span class="tag">Summer 2026</span><span class="tag">QSP</span><span class="tag">Scientific machine learning</span></div>
+      <h3>Correcting incomplete QSP models with universal differential equations</h3>
+      <p>In summer 2026 I was a quantitative systems pharmacology (QSP) intern at AstraZeneca. QSP models are mechanistic differential equation models of how a drug acts in the body, and they are often built with pieces of the biology missing or misspecified. I applied universal differential equations (UDEs) and sparse identification of nonlinear dynamics (SINDy) to learn the missing terms from data and recover an interpretable, corrected model, which improved both mechanistic parameter recovery and predictions.</p>
+      <p>On synthetic data from the Simeoni tumor growth model, the corrected model reduced the error in the EC50 and Emax drug-effect parameters from 18.74% to 11.81% compared to the misspecified model. It also fixed two clinically relevant mistakes of the misspecified model: an overestimate of tumor growth inhibition (above 80% TGI at day 30 on a 2 mg weekly dose) and a 3-fold underestimate of the minimum weekly dose needed to reach 80% TGI.</p>
+      <p>The code and data from this project are not public.</p>
+    </div>
+  </article>
 
   <article class="card project wide">
     <div>

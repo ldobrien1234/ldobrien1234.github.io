@@ -34,16 +34,6 @@
 
   <article class="card project wide">
     <div>
-      <div class="meta"><span class="tag">Summer 2026</span><span class="tag">QSP</span><span class="tag">Scientific machine learning</span></div>
-      <h3>Correcting incomplete QSP models with universal differential equations</h3>
-      <p>In summer 2026 I was a quantitative systems pharmacology (QSP) intern at AstraZeneca. QSP models are mechanistic differential equation models of how a drug acts in the body, and they are often built with pieces of the biology missing or misspecified. I applied universal differential equations (UDEs) and sparse identification of nonlinear dynamics (SINDy) to learn the missing terms from data and recover an interpretable, corrected model, which improved both mechanistic parameter recovery and predictions.</p>
-      <p>On synthetic data from the Simeoni tumor growth model, the corrected model reduced the error in the EC50 and Emax drug-effect parameters from 18.74% to 11.81% compared to the misspecified model. It also fixed two clinically relevant mistakes of the misspecified model: an overestimate of tumor growth inhibition (above 80% TGI at day 30 on a 2 mg weekly dose) and a 3-fold underestimate of the minimum weekly dose needed to reach 80% TGI.</p>
-      <p>The code and data from this project are not public.</p>
-    </div>
-  </article>
-
-  <article class="card project wide">
-    <div>
       <div class="meta"><span class="tag">New in 2026</span><span class="tag">Symmetry</span><span class="tag">Image analysis</span></div>
       <h3>A high-throughput tool for quantifying symmetry in image datasets</h3>
       <p>Biological symmetry is usually reduced to a discrete, subjective label, even though real organisms are symmetric by degrees. With Punit Gandhi, Maria-Veronica Ciocanel, and Adriana Dawes, I built a user-friendly computational pipeline that measures symmetry as a continuous variable using transformation information. We prove the measure is invariant, equivariant, and Lipschitz continuous under translation, rotation, reflection, and rescaling, which means it can be applied across heterogeneous image datasets without manual landmarking or alignment.</p>
@@ -53,6 +43,16 @@
       <img src="assets/img/ti-equivariance.png" alt="A flower image under rotation, reflection, and rescaling, with the corresponding transformation information curves for rotations and reflections" loading="lazy">
       <figcaption>Transformation information is equivariant. Rotating, reflecting, or rescaling a flower image (top row) shifts or rescales its symmetry curves in a predictable way (bottom rows), so symmetry can be compared across images without aligning them first.</figcaption>
     </figure>
+  </article>
+
+  <article class="card project wide">
+    <div>
+      <div class="meta"><span class="tag">Summer 2026</span><span class="tag">QSP</span><span class="tag">Scientific machine learning</span></div>
+      <h3>Correcting incomplete QSP models with universal differential equations</h3>
+      <p>In summer 2026 I was a quantitative systems pharmacology (QSP) intern at AstraZeneca. QSP models are mechanistic differential equation models of how a drug acts in the body, and they are often built with pieces of the biology missing or misspecified. I applied universal differential equations (UDEs) and sparse identification of nonlinear dynamics (SINDy) to learn the missing terms from data and recover an interpretable, corrected model, which improved both mechanistic parameter recovery and predictions.</p>
+      <p>On synthetic data from the Simeoni tumor growth model, the corrected model reduced the error in the EC50 and Emax drug-effect parameters from 18.74% to 11.81% compared to the misspecified model. It also fixed two clinically relevant mistakes of the misspecified model: an overestimate of tumor growth inhibition (above 80% TGI at day 30 on a 2 mg weekly dose) and a 3-fold underestimate of the minimum weekly dose needed to reach 80% TGI.</p>
+      <p>The code and data from this project are not public.</p>
+    </div>
   </article>
 
   <article class="card project">

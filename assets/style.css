@@ -106,16 +106,11 @@ main { padding-bottom: 3rem; }
 
 /* Highlighted "curiosity" box */
 .spark {
-  position: relative; margin: 2rem 0;
+  margin: 2rem 0;
   padding: 1.5rem 1.6rem 1.4rem;
   border-radius: var(--radius);
-  background: var(--surface);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
-}
-.spark::before {
-  content: ""; position: absolute; inset: 0 auto 0 0; width: 5px;
-  background: var(--accent); border-radius: var(--radius) 0 0 var(--radius);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
 }
 .spark-kicker {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: .78rem; font-weight: 700;

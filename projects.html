@@ -1,115 +1,162 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Projects - Liam D. O'Brien</title>
+  <title>Projects · Liam D. O'Brien</title>
   <meta name="description" content="Research projects, publications, and code by Liam D. O'Brien: pattern formation, approximate symmetry, graph neural ODEs, and expository mathematics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23bb0000'/%3E%3Ctext x='16' y='22' font-family='Inter,sans-serif' font-weight='700' font-size='17' fill='white' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
 </head>
 <body>
+<header class="site">
+  <div class="wrap">
+    <a class="site-title" href="index.html">Liam D. O'Brien</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="projects.html" aria-current="page">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-<p class="nav"><a href="index.html">About</a> | <a href="projects.html">Projects</a> | <a href="contact.html">Contact</a></p>
+<main class="wrap">
+  <section class="hero" style="grid-template-columns:1fr; padding-bottom:0">
+    <div>
+      <h1>Projects</h1>
+      <p class="tagline">Research, code, and a few expository papers.</p>
+    </div>
+  </section>
 
-<h1>Projects</h1>
+  <h2 id="research">Research</h2>
 
-<p>Research, code, and a few expository papers.</p>
+  <article class="card project wide">
+    <div>
+      <div class="meta"><span class="tag">New · 2026</span><span class="tag">Symmetry</span><span class="tag">Image analysis</span></div>
+      <h3>A high-throughput tool for quantifying symmetry in image datasets</h3>
+      <p>Biological symmetry is usually reduced to a discrete, subjective label, even though real organisms are symmetric by degrees. With Punit Gandhi, Maria-Veronica Ciocanel, and Adriana Dawes, I built a user-friendly computational pipeline that measures symmetry as a continuous variable using transformation information. We prove the measure is invariant, equivariant, and Lipschitz continuous under translation, rotation, reflection, and rescaling, which means it can be applied across heterogeneous image datasets without manual landmarking or alignment.</p>
+      <p>Published in the <em>Bulletin of Mathematical Biology</em>. <a href="https://link.springer.com/epdf/10.1007/s11538-026-01754-9?sharing_token=SE8TNnUE3oilE01Us4fa0_e4RwlQNchNByi7wbcMAY4WlV_rGijbqDaA8Fr7830GAKeMncpIOEDiSuMh5CEQzjRL1ufHJtHZa0URgUhm5rr5hwh0gVDjmleghElhGr7EeBrZ4JApwAdycWcws3ccg0rB5VgP6GZGxrrEWQM5w1E%3D" target="_blank" rel="noopener">Read the paper (free access) →</a> · <a href="https://github.com/ldobrien1234/TransInfo" target="_blank" rel="noopener">Code →</a></p>
+    </div>
+    <figure class="full">
+      <img src="assets/img/ti-equivariance.png" alt="A flower image under rotation, reflection, and rescaling, with the corresponding transformation information curves for rotations and reflections" loading="lazy">
+      <figcaption>Transformation information is equivariant. Rotating, reflecting, or rescaling a flower image (top row) shifts or rescales its symmetry curves in a predictable way (bottom rows), so symmetry can be compared across images without aligning them first.</figcaption>
+    </figure>
+  </article>
 
-<h2>Research</h2>
+  <article class="card project">
+    <div>
+      <div class="meta"><span class="tag">Pattern formation</span><span class="tag">Bifurcation theory</span></div>
+      <h3>Structural causes of pattern formation</h3>
+      <p>Pattern formation is a hallmark of developmental biology, where cells within a tissue or organism differentiate in a precise spatial arrangement to form complex patterns. In <a href="https://doi.org/10.1007/s00285-025-02296-9" target="_blank" rel="noopener">recent work</a>, we show that patterns of cell fates depend on both the cell-communication network and the chemical signals within each cell. We hope to generalize this work to pinpoint molecular causes of pattern failure.</p>
+      <p><a href="https://github.com/ldobrien1234/cell-pattern-validation" target="_blank" rel="noopener">Numerical experiments on GitHub →</a></p>
+    </div>
+    <figure>
+      <img src="assets/img/cell-pattern.svg" alt="Example of a cell fate pattern forming in a tissue" loading="lazy">
+      <figcaption>An example of a cell fate pattern that can form in a tissue.</figcaption>
+    </figure>
+  </article>
 
-<h3>A high-throughput tool for quantifying symmetry in image datasets</h3>
+  <article class="card project">
+    <div>
+      <div class="meta"><span class="tag">Symmetry</span><span class="tag">Turing patterns</span></div>
+      <h3>Constrained changes in approximate symmetries of a Turing pattern</h3>
+      <p>Symmetry is ubiquitous in biology and is an important predictor of survivability, fecundity, and evolvability. Although biological symmetry is often intuitive, it doesn't fit the idealized definitions of symmetry used in mathematics. <em>Transformation Information</em>, introduced by Gandhi et al. (2021), is a useful tool for measuring approximate symmetries in biology. I tracked approximate symmetries of a Turing PDE over time and found that the ways symmetries can change are constrained.</p>
+      <p>More detail is in my <a href="https://u.osu.edu/obrien-1093/files/2023/08/SMB.poster.2023.pptx" target="_blank" rel="noopener">SMB 2023 poster</a>. Related work by my advisor, Dr. Adriana T. Dawes, and collaborators: <a href="https://doi.org/10.1016/j.mbs.2025.109431" target="_blank" rel="noopener">Characterizing symmetry transitions in systems with dynamic morphology</a>.</p>
+      <p><a href="https://github.com/ldobrien1234/TransInfo" target="_blank" rel="noopener">Transformation Information code on GitHub →</a></p>
+    </div>
+    <figure>
+      <img src="assets/img/turing-symmetry.png" alt="Steady state of a Turing PDE beside its transformation information" loading="lazy">
+      <figcaption>Left: steady state of the Turing PDE. Right: its transformation information, which reveals the approximate symmetries.</figcaption>
+    </figure>
+  </article>
 
-<p>Biological symmetry is usually reduced to a discrete, subjective label, even though real organisms are symmetric by degrees. With Punit Gandhi, Maria-Veronica Ciocanel, and Adriana Dawes, I built a user-friendly computational pipeline that measures symmetry as a continuous variable using transformation information. We prove the measure is invariant, equivariant, and Lipschitz continuous under translation, rotation, reflection, and rescaling, which means it can be applied across heterogeneous image datasets without manual landmarking or alignment.</p>
+  <article class="card project">
+    <div>
+      <div class="meta"><span class="tag">Machine learning</span><span class="tag">Hematopoiesis</span></div>
+      <h3>Modeling hematopoiesis with machine learning</h3>
+      <p>My research at UC Irvine in Dr. Qing Nie's lab group worked toward using machine learning to model cell fate. In particular, I wanted to discover whether a graph neural ODE could mimic a stochastic model of hematopoiesis. The code covers both creating toy datasets from a hematopoiesis model and fitting them with neural ODEs and graph neural ODEs.</p>
+      <p><a href="https://github.com/ldobrien1234/gnode-cell-communication" target="_blank" rel="noopener">gnode-cell-communication →</a> · <a href="https://github.com/ldobrien1234/experimenting-with-gnodes" target="_blank" rel="noopener">experimenting-with-gnodes →</a></p>
+    </div>
+    <figure>
+      <img src="assets/img/neural-ode-fit.png" alt="A neural ODE fit to a stochastic model of hematopoiesis" loading="lazy">
+      <figcaption>A neural ODE's fit to a stochastic model of hematopoiesis.</figcaption>
+    </figure>
+  </article>
 
-<p>Published in the <em>Bulletin of Mathematical Biology</em>. <a href="https://link.springer.com/epdf/10.1007/s11538-026-01754-9?sharing_token=SE8TNnUE3oilE01Us4fa0_e4RwlQNchNByi7wbcMAY4WlV_rGijbqDaA8Fr7830GAKeMncpIOEDiSuMh5CEQzjRL1ufHJtHZa0URgUhm5rr5hwh0gVDjmleghElhGr7EeBrZ4JApwAdycWcws3ccg0rB5VgP6GZGxrrEWQM5w1E%3D">Read the paper (free access)</a> | <a href="https://github.com/ldobrien1234/TransInfo">Code</a></p>
+  <h2 id="publications">Publications</h2>
+  <div class="pub">
+    <div class="title">A High Throughput and User-Friendly Computational Tool for Quantifying and Visualizing Symmetry Variation in Image Datasets</div>
+    <div>Liam D. O'Brien, Punit Gandhi, Maria-Veronica Ciocanel, and Adriana T. Dawes</div>
+    <div class="venue">Bulletin of Mathematical Biology 88, 11 (2026) · <a href="https://doi.org/10.1007/s11538-026-01754-9" target="_blank" rel="noopener">doi:10.1007/s11538-026-01754-9</a> · <a href="https://link.springer.com/epdf/10.1007/s11538-026-01754-9?sharing_token=SE8TNnUE3oilE01Us4fa0_e4RwlQNchNByi7wbcMAY4WlV_rGijbqDaA8Fr7830GAKeMncpIOEDiSuMh5CEQzjRL1ufHJtHZa0URgUhm5rr5hwh0gVDjmleghElhGr7EeBrZ4JApwAdycWcws3ccg0rB5VgP6GZGxrrEWQM5w1E%3D" target="_blank" rel="noopener">free full text</a></div>
+  </div>
+  <div class="pub">
+    <div class="title">Structural causes of pattern formation and loss through model-independent bifurcation analysis</div>
+    <div>Liam D. O'Brien and Adriana T. Dawes</div>
+    <div class="venue">Journal of Mathematical Biology 91, 6 (2025) · <a href="https://doi.org/10.1007/s00285-025-02296-9" target="_blank" rel="noopener">doi:10.1007/s00285-025-02296-9</a> · <a href="https://doi.org/10.21203/rs.3.rs-6098751/v1" target="_blank" rel="noopener">preprint</a></div>
+  </div>
 
-<figure>
-  <img src="assets/img/ti-equivariance.png" alt="A flower image under rotation, reflection, and rescaling, with the corresponding transformation information curves">
-  <figcaption>Transformation information is equivariant. Rotating, reflecting, or rescaling a flower image (top row) shifts or rescales its symmetry curves in a predictable way (bottom rows), so symmetry can be compared across images without aligning them first.</figcaption>
-</figure>
+  <h2 id="expository">Expository writing</h2>
+  <p>Two papers I wrote as an undergraduate. I am no expert on either topic, but I find both fascinating.</p>
 
-<h3>Structural causes of pattern formation</h3>
+  <article class="card project">
+    <div>
+      <h3>Intro to fractals, Barnsley's Collage Theorem, and image compression</h3>
+      <p>Assuming only undergraduate real analysis, this paper builds the theory required to understand Barnsley's Collage Theorem, which lets us approximate extremely complex shapes with only a few functions. It closes with a brief discussion of how the theorem can be used for image compression.</p>
+      <p><a class="btn" href="assets/files/Fractal_Geometry.pdf" target="_blank" rel="noopener">Read the paper (PDF)</a></p>
+    </div>
+    <figure>
+      <img src="assets/img/fractal-leaf.png" alt="A fractal leaf generated by three linear functions" loading="lazy">
+      <figcaption>A fractal leaf defined by just three linear functions.</figcaption>
+    </figure>
+  </article>
 
-<p>Pattern formation is a hallmark of developmental biology, where cells within a tissue or organism differentiate in a precise spatial arrangement to form complex patterns. In <a href="https://doi.org/10.1007/s00285-025-02296-9">recent work</a>, we show that patterns of cell fates depend on both the cell-communication network and the chemical signals within each cell. We hope to generalize this work to pinpoint molecular causes of pattern failure.</p>
+  <article class="card project">
+    <div>
+      <h3>A history of sphere packing</h3>
+      <p>An accessible account of the search for optimal sphere packings in <em>n</em> dimensions. I give the proof of the optimal packing in two dimensions, then discuss the intuition behind Thomas Hales's proof in three dimensions and Maryna Viazovska's results in dimensions 8 and 24.</p>
+      <p><a class="btn" href="assets/files/Sphere_Packing.pdf" target="_blank" rel="noopener">Read the paper (PDF)</a></p>
+    </div>
+    <figure>
+      <img src="assets/img/sphere-packing.png" alt="Face-centered cubic sphere packing" loading="lazy">
+      <figcaption>The optimal sphere packing in three dimensions.</figcaption>
+    </figure>
+  </article>
 
-<p><a href="https://github.com/ldobrien1234/cell-pattern-validation">Numerical experiments on GitHub</a></p>
+  <h2 id="code">Code</h2>
+  <p>Public repositories on <a href="https://github.com/ldobrien1234" target="_blank" rel="noopener">GitHub</a>.</p>
+  <div class="repos">
+    <article class="card repo">
+      <h3><a href="https://github.com/ldobrien1234/cell-pattern-validation" target="_blank" rel="noopener">cell-pattern-validation</a></h3>
+      <p>Numerical experiments to validate our theoretical predictions about structural causes of pattern formation.</p>
+      <span class="lang matlab">MATLAB</span>
+    </article>
+    <article class="card repo">
+      <h3><a href="https://github.com/ldobrien1234/TransInfo" target="_blank" rel="noopener">TransInfo</a></h3>
+      <p>Code to apply transformation information to image data.</p>
+      <span class="lang matlab">MATLAB</span>
+    </article>
+    <article class="card repo">
+      <h3><a href="https://github.com/ldobrien1234/experimenting-with-gnodes" target="_blank" rel="noopener">experimenting-with-gnodes</a></h3>
+      <p>A Graph Neural Ordinary Differential Equation (GNODE) for modeling Newtonian gravity.</p>
+      <span class="lang python">Python</span>
+    </article>
+    <article class="card repo">
+      <h3><a href="https://github.com/ldobrien1234/gnode-cell-communication" target="_blank" rel="noopener">gnode-cell-communication</a></h3>
+      <p>Using a Graph Neural ODE to model cell communication.</p>
+      <span class="lang python">Python</span>
+    </article>
+  </div>
+</main>
 
-<figure>
-  <img src="assets/img/cell-pattern.svg" alt="Example of a cell fate pattern forming in a tissue" width="300">
-  <figcaption>An example of a cell fate pattern that can form in a tissue.</figcaption>
-</figure>
-
-<h3>Constrained changes in approximate symmetries of a Turing pattern</h3>
-
-<p>Symmetry is ubiquitous in biology and is an important predictor of survivability, fecundity, and evolvability. Although biological symmetry is often intuitive, it doesn't fit the idealized definitions of symmetry used in mathematics. <em>Transformation Information</em>, introduced by Gandhi et al. (2021), is a useful tool for measuring approximate symmetries in biology. I tracked approximate symmetries of a Turing PDE over time and found that the ways symmetries can change are constrained.</p>
-
-<p>More detail is in my <a href="https://u.osu.edu/obrien-1093/files/2023/08/SMB.poster.2023.pptx">SMB 2023 poster</a>. Related work by my advisor, Dr. Adriana T. Dawes, and collaborators: <a href="https://doi.org/10.1016/j.mbs.2025.109431">Characterizing symmetry transitions in systems with dynamic morphology</a>.</p>
-
-<p><a href="https://github.com/ldobrien1234/TransInfo">Transformation Information code on GitHub</a></p>
-
-<figure>
-  <img src="assets/img/turing-symmetry.png" alt="Steady state of a Turing PDE beside its transformation information">
-  <figcaption>Left: steady state of the Turing PDE. Right: its transformation information, which reveals the approximate symmetries.</figcaption>
-</figure>
-
-<h3>Modeling hematopoiesis with machine learning</h3>
-
-<p>My research at UC Irvine in Dr. Qing Nie's lab group worked toward using machine learning to model cell fate. In particular, I wanted to discover whether a graph neural ODE could mimic a stochastic model of hematopoiesis. The code covers both creating toy datasets from a hematopoiesis model and fitting them with neural ODEs and graph neural ODEs.</p>
-
-<p><a href="https://github.com/ldobrien1234/gnode-cell-communication">gnode-cell-communication</a> | <a href="https://github.com/ldobrien1234/experimenting-with-gnodes">experimenting-with-gnodes</a></p>
-
-<figure>
-  <img src="assets/img/neural-ode-fit.png" alt="A neural ODE fit to a stochastic model of hematopoiesis">
-  <figcaption>A neural ODE's fit to a stochastic model of hematopoiesis.</figcaption>
-</figure>
-
-<h2>Publications</h2>
-
-<ul>
-  <li>L. D. O'Brien, P. Gandhi, M.-V. Ciocanel, and A. T. Dawes. A High Throughput and User-Friendly Computational Tool for Quantifying and Visualizing Symmetry Variation in Image Datasets. <em>Bulletin of Mathematical Biology</em> 88, 11 (2026). <a href="https://doi.org/10.1007/s11538-026-01754-9">doi:10.1007/s11538-026-01754-9</a> | <a href="https://link.springer.com/epdf/10.1007/s11538-026-01754-9?sharing_token=SE8TNnUE3oilE01Us4fa0_e4RwlQNchNByi7wbcMAY4WlV_rGijbqDaA8Fr7830GAKeMncpIOEDiSuMh5CEQzjRL1ufHJtHZa0URgUhm5rr5hwh0gVDjmleghElhGr7EeBrZ4JApwAdycWcws3ccg0rB5VgP6GZGxrrEWQM5w1E%3D">free full text</a></li>
-  <li>L. D. O'Brien and A. T. Dawes. Structural causes of pattern formation and loss through model-independent bifurcation analysis. <em>Journal of Mathematical Biology</em> 91, 6 (2025). <a href="https://doi.org/10.1007/s00285-025-02296-9">doi:10.1007/s00285-025-02296-9</a> | <a href="https://doi.org/10.21203/rs.3.rs-6098751/v1">preprint</a></li>
-</ul>
-
-<h2>Expository writing</h2>
-
-<p>Two papers I wrote as an undergraduate. I am no expert on either topic, but I find both fascinating.</p>
-
-<h3>Intro to fractals, Barnsley's Collage Theorem, and image compression</h3>
-
-<p>Assuming only undergraduate real analysis, this paper builds the theory required to understand Barnsley's Collage Theorem, which lets us approximate extremely complex shapes with only a few functions. It closes with a brief discussion of how the theorem can be used for image compression.</p>
-
-<p><a href="assets/files/Fractal_Geometry.pdf">Read the paper (PDF)</a></p>
-
-<figure>
-  <img src="assets/img/fractal-leaf.png" alt="A fractal leaf generated by three linear functions" width="300">
-  <figcaption>A fractal leaf defined by just three linear functions.</figcaption>
-</figure>
-
-<h3>A history of sphere packing</h3>
-
-<p>An accessible account of the search for optimal sphere packings in <em>n</em> dimensions. I give the proof of the optimal packing in two dimensions, then discuss the intuition behind Thomas Hales's proof in three dimensions and Maryna Viazovska's results in dimensions 8 and 24.</p>
-
-<p><a href="assets/files/Sphere_Packing.pdf">Read the paper (PDF)</a></p>
-
-<figure>
-  <img src="assets/img/sphere-packing.png" alt="Face-centered cubic sphere packing" width="300">
-  <figcaption>The optimal sphere packing in three dimensions.</figcaption>
-</figure>
-
-<h2>Code</h2>
-
-<p>Public repositories on <a href="https://github.com/ldobrien1234">GitHub</a>.</p>
-
-<ul>
-  <li><a href="https://github.com/ldobrien1234/cell-pattern-validation">cell-pattern-validation</a> (MATLAB): numerical experiments to validate our theoretical predictions about structural causes of pattern formation.</li>
-  <li><a href="https://github.com/ldobrien1234/TransInfo">TransInfo</a> (MATLAB): code to apply transformation information to image data.</li>
-  <li><a href="https://github.com/ldobrien1234/experimenting-with-gnodes">experimenting-with-gnodes</a> (Python): a Graph Neural Ordinary Differential Equation (GNODE) for modeling Newtonian gravity.</li>
-  <li><a href="https://github.com/ldobrien1234/gnode-cell-communication">gnode-cell-communication</a> (Python): using a Graph Neural ODE to model cell communication.</li>
-</ul>
-
-<hr>
-
-<p class="footer">Liam D. O'Brien, 2026. <a href="https://github.com/ldobrien1234">GitHub</a> | <a href="https://www.linkedin.com/in/ldobrien">LinkedIn</a> | <a href="https://orcid.org/0009-0007-3827-9771">ORCID</a></p>
-
+<footer>
+  <div class="wrap">
+    <span class="foot-brand"><img src="assets/img/ohio-state-logo.svg" alt="The Ohio State University" width="22" height="22"> © 2026 Liam D. O'Brien</span>
+    <span><a href="https://github.com/ldobrien1234">GitHub</a> · <a href="https://www.linkedin.com/in/ldobrien">LinkedIn</a> · <a href="https://orcid.org/0009-0007-3827-9771">ORCID</a></span>
+  </div>
+</footer>
 </body>
 </html>

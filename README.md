@@ -8,7 +8,7 @@ Source for Liam D. O'Brien's personal website: a static site (plain HTML and CSS
 index.html        About page (professional + personal)
 projects.html     Research, publications, expository papers, code
 contact.html      Contact links
-assets/style.css  Shared stylesheet
+assets/style.css  Shared stylesheet (light + dark mode)
 assets/img/       Photos and figures
 assets/files/     PDFs
 ```
